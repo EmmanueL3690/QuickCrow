@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { Pencil } from "lucide-react"; // For the edit icon
 import "../styles/ProfilePage.css";
 
+  import profile from '../assets/profile.jpg';
+
 export default function Profile() {
   const [name, setName] = useState("Emmanuel Innocent");
   const [email, setEmail] = useState("emmanuel@example.com");
   const [address, setAddress] = useState("23 Food Street, Lagos");
+
 
   return (
     <div className="profile-container">
       {/* Top Section */}
       <div className="profile-header">
         <img
-          src="\IMG_20231227_165747_020.jpg"
+          src={profile}
           alt="Profile"
           className="profile-pic"
         />

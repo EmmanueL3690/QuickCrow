@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/Footer.css";
 
+import logo from "../assets/logo.jpg";
+
 
 function Footer() {
   const [showText, setShowText] = useState(true);
@@ -30,7 +32,7 @@ function Footer() {
       <div className="footer-top">
         {/* Left: Logo & Typewriter */}
         <div className="footer-left">
-          <img src="\Logo img.jpg" alt="Logo" className="footer-logo" />
+          <img src={logo} alt="Logo" className="footer-logo" />
           {showText && (
             <div className="typewriter">
               Bringing comfort food to your comfort zone. Your favorite flavors. <br />

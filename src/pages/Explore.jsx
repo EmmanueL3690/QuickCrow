@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero2';
+import Hero2 from '../components/Hero2';
 import FeaturedRestaurants from '../components/Featuredrestaurants';
 import FoodCategories from "../components/FoodCategories";
 import TrendingNow from "../components/TrendingNow";
@@ -11,7 +11,7 @@ export default function Explore() {
   return (
     <div className="app space-y-16">
       <FadeInSection>
-        <Hero />
+       <Hero2 />
       </FadeInSection>
 
       <FadeInSection delay={0.1}>

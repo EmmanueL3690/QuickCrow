@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/index.css";
 
+// ✅ Import images from assets folder
+import homeScreen1 from "../assets/homeScreen1.jpg";
+import screen2 from "../assets/screen2.jpg";
+import screen3 from "../assets/screen3.jpg";
+
 const slides = [
   {
-    src: '\home screen1.jpg',
+    src: homeScreen1,
     alt: 'Slide 1',
     description: [
       <>First order?</>,
@@ -12,7 +17,7 @@ const slides = [
     ]
   },
   {
-    src: '\screen 2.jpg',
+    src: screen2,
     alt: 'Slide 2',
     description: [
       <h2 style={{ color: 'white', fontWeight: 'bold', fontSize: '3.5rem' }}>Special offer</h2>,
@@ -23,14 +28,13 @@ const slides = [
     ]
   },
   {
-    src: '\screen3.jpg',
+    src: screen3,
     alt: 'Slide 3',
     description: [
-    <>Service on demand!</>,
-    <>Connect with <span style={{ color: 'green' }}>top rated</span> professionals</>,
-    <>All services available, <span style={{ color: 'gray' }}>T&C Applied</span></>
+      <>Service on demand!</>,
+      <>Connect with <span style={{ color: 'green' }}>top rated</span> professionals</>,
+      <>All services available, <span style={{ color: 'gray' }}>T&C Applied</span></>
     ]
-
   }
 ];
 
@@ -53,11 +57,7 @@ const Hero = () => {
           className={`slide ${index === currentIndex ? 'active' : ''}`}
           key={index}
         >
-          <img
-            src={slide.src}
-            alt={slide.alt}
-            onError={(e) => (e.target.src = '/placeholder.svg')}
-          />
+          <img src={slide.src} alt={slide.alt} />
           <div className="slide-description">
             {slide.description.map((line, i) => (
               <p key={i}>{line}</p>
@@ -70,5 +70,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-

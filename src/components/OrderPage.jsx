@@ -1,25 +1,18 @@
-import React from "react"
-import "../styles/OrderPage.css"
+import React from "react";
+import "../styles/OrderPage.css";
+
+// ✅ Import your images from assets
+import image8 from "../assets/image8.png";
+import sushiCentral from "../assets/Sushi Central.jpg";
+import grilledChicken from "../assets/Grilled Chicken.jpg";
+import tacoFiesta from "../assets/Taco Fiesta.jpg";
 
 const orders = [
   {
     id: "ORD001",
     restaurantName: "Pizza Palace",
     dishName: "Large Pepperoni Pizza",
-    imageUrl: "\image 8.png",
-    status: "ongoing",
-    items: [
-      { name: "Large Pepperoni Pizza", quantity: 1 },
-      { name: "Coke", quantity: 2 },
-    ],
-    totalPrice: "$25.99",
-    orderDate: "2024-07-15 19:30",
-  },
-    {
-    id: "ORD001",
-    restaurantName: "Pizza Palace",
-    dishName: "Large Pepperoni Pizza",
-    imageUrl: "\image 8.png",
+    imageUrl: image8, // ✅ Imported asset
     status: "ongoing",
     items: [
       { name: "Large Pepperoni Pizza", quantity: 1 },
@@ -32,7 +25,7 @@ const orders = [
     id: "ORD002",
     restaurantName: "Sushi Express",
     dishName: "Assorted Sushi Platter",
-    imageUrl: "\Sushi Central.jpg",
+    imageUrl: sushiCentral, // ✅ Imported asset
     status: "ongoing",
     items: [
       { name: "Assorted Sushi Platter", quantity: 1 },
@@ -45,7 +38,7 @@ const orders = [
     id: "ORD003",
     restaurantName: "Burger Joint",
     dishName: "Classic Cheeseburger Meal",
-    imageUrl: "/placeholder.svg",
+    imageUrl: image8, // ✅ You can replace this with your burger image later
     status: "completed",
     items: [
       { name: "Classic Cheeseburger", quantity: 1 },
@@ -59,7 +52,7 @@ const orders = [
     id: "ORD004",
     restaurantName: "Healthy Bites",
     dishName: "Quinoa Salad with Chicken",
-    imageUrl: "\Grilled Chicken.jpg",
+    imageUrl: grilledChicken, // ✅ Imported asset
     status: "completed",
     items: [
       { name: "Quinoa Salad", quantity: 1 },
@@ -68,12 +61,11 @@ const orders = [
     totalPrice: "$14.75",
     orderDate: "2024-07-13 12:00",
   },
-  
   {
     id: "ORD005",
     restaurantName: "Taco Fiesta",
     dishName: "Taco Combo",
-    imageUrl: "\Taco Fiesta.jpg",
+    imageUrl: tacoFiesta, // ✅ Imported asset
     status: "cancelled",
     items: [
       { name: "3 Tacos (Beef)", quantity: 1 },
@@ -82,12 +74,14 @@ const orders = [
     totalPrice: "$16.00",
     orderDate: "2024-07-12 20:00",
   },
-]
+];
 
 export default function OrderPage() {
-  const [activeTab, setActiveTab] = React.useState("ongoing")
+  const [activeTab, setActiveTab] = React.useState("ongoing");
 
-  const filteredOrders = orders.filter((order) => order.status === activeTab)
+  const filteredOrders = orders.filter(
+    (order) => order.status === activeTab
+  );
 
   return (
     <div className="order-container">
@@ -122,8 +116,11 @@ export default function OrderPage() {
             <div className="order-card" key={order.id}>
               <div className="card-header">
                 <h3>{order.restaurantName}</h3>
-                <span className={`badge ${order.status}`}>{order.status}</span>
+                <span className={`badge ${order.status}`}>
+                  {order.status}
+                </span>
               </div>
+
               <div className="order-info">
                 <img
                   src={order.imageUrl}
@@ -135,7 +132,11 @@ export default function OrderPage() {
                   <p className="order-id">Order ID: {order.id}</p>
                 </div>
               </div>
-              <p className="order-date">Ordered on: {order.orderDate}</p>
+
+              <p className="order-date">
+                Ordered on: {order.orderDate}
+              </p>
+
               <table className="order-table">
                 <thead>
                   <tr>
@@ -152,10 +153,12 @@ export default function OrderPage() {
                   ))}
                 </tbody>
               </table>
+
               <div className="total">
                 <strong>Total:</strong>
                 <span>{order.totalPrice}</span>
               </div>
+
               <div className="order-actions">
                 <button className="btn-outline">View Details</button>
                 {order.status !== "cancelled" && (
@@ -167,7 +170,7 @@ export default function OrderPage() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
 

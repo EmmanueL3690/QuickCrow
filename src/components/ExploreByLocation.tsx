@@ -2,13 +2,20 @@ import React from "react";
 import "../styles/ExploreByLocation.css";
 import { MapPin } from "lucide-react";
 
+import lagosImg from "../assets/lagos.jpg";
+import abujaImg from "../assets/Abuja.jpg";
+import kanoImg from "../assets/Kano.jpg";
+import portHarcourtImg from "../assets/PortHarcourt.jpg";
+import ibadanImg from "../assets/Ibadan.jpg";
+import beninCityImg from "../assets/Benin City.jpg";
+
 const locations = [
-  { name: "Lagos", image: "\lagos.jpg" },
-  { name: "Abuja", image: "\Abuja.jpg" },
-  { name: "Kano", image: "\Kano.jpg" },
-  { name: "Port Harcourt", image: "\Port Harcourt.jpg" },
-  { name: "Ibadan", image: "\Ibadan.jpg" },
-  { name: "Benin City", image: "\Benin City.jpg" },
+  { name: "Lagos", image: lagosImg },
+  { name: "Abuja", image: abujaImg },
+  { name: "Kano", image: kanoImg },
+  { name: "Port Harcourt", image: portHarcourtImg },
+  { name: "Ibadan", image: ibadanImg },
+  { name: "Benin City", image: beninCityImg },
 ];
 
 const ExploreByLocation = () => {

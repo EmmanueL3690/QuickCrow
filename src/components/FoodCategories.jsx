@@ -1,46 +1,53 @@
 import React from "react";
 import "../styles/FoodCategories.css";
 
+import pizzaImg from "../assets/image23.png";
+import chineseImg from "../assets/image21-1.png";
+import grillImg from "../assets/Grill.jpg";
+import dessertImg from "../assets/Dessert.jpg";
+import burgersImg from "../assets/image8.png";
+import drinksImg from "../assets/Drinks.jpg";
+
 const categories = [
   {
     id: 1,
     name: "Pizza",
-    image: "\image 23.png",
+    image: pizzaImg,
     rating: 4.5,
     description: "Cheesy and crispy Italian goodness.",
   },
   {
     id: 2,
     name: "Chinese",
-    image: "\image 21 (1).png",
+    image: chineseImg,
     rating: 4.2,
     description: "Noodles, rice, and dumplings with flavor.",
   },
   {
     id: 3,
     name: "Grill",
-    image: "\Grill.jpg",
+    image: grillImg,
     rating: 4.7,
     description: "Smoky meats straight from the flame.",
   },
   {
     id: 4,
     name: "Dessert",
-    image: "\Dessert.jpg",
+    image: dessertImg,
     rating: 4.4,
     description: "Sweet treats and indulgent bites.",
   },
   {
     id: 5,
     name: "Burgers",
-    image: "\image 8.png ",
+    image: burgersImg,
     rating: 4.6,
     description: "Juicy patties stacked with flavor.",
   },
   {
     id: 6,
     name: "Drinks",
-    image: "\Drinks.jpg",
+    image: drinksImg,
     rating: 4.3,
     description: "Refreshing sips for every meal.",
   },

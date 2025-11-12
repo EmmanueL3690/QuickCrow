@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/index.css";
 
+import logo from "../assets/logo.jpg";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -62,7 +64,7 @@ const Header = () => {
 
         {/* Logo Centered on Mobile, Left on Desktop */}
         <div className="logo">
-          <img src="/Logo img.jpg" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
 
         {/* Desktop Nav Centered */}

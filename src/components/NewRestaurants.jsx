@@ -1,12 +1,20 @@
 import "../styles/NewRestaurants.css";
 
+// ✅ Import images from assets
+import image40 from "../assets/image40.png";
+import image41 from "../assets/image41.png";
+import frame85 from "../assets/frame85.png";
+import ellipse13 from "../assets/ellipse1-3.png";
+import ellipse14 from "../assets/ellipse1-4.png";
+import ellipse15 from "../assets/ellipse1-5.png";
+
 const restaurants = [
   {
     id: 1,
     name: "The Sass Dose",
     description: "Elegant bites to start your day",
-    image: "\image 40.png",
-    logo: "\Ellipse 1 (3).png",
+    image: image40,
+    logo: ellipse13,
     category: "NEW",
     time: "20 min",
     rating: "4.0",
@@ -15,8 +23,8 @@ const restaurants = [
     id: 2,
     name: "Breakfast Bistro",
     description: "Breakfast, slow and soulful.",
-    image: "\image 41.png",
-    logo: "\Ellipse 1 (4).png",
+    image: image41,
+    logo: ellipse14,
     category: "NEW",
     time: "35 min",
     rating: "4.0",
@@ -25,8 +33,8 @@ const restaurants = [
     id: 3,
     name: "The Sassy Dose",
     description: "Elegant bites to start your day",
-    image: "\Frame 85.png",
-    logo: "\Ellipse 1 (5).png",
+    image: frame85,
+    logo: ellipse15,
     category: "NEW",
     time: "20 min",
     rating: "4.0",
@@ -42,17 +50,18 @@ export default function NewRestaurants() {
           <div key={restaurant.id} className="card">
             <div className="image-container">
               <img
-                src={restaurant.image || "/placeholder.svg"}
+                src={restaurant.image}
                 alt={`${restaurant.name} banner`}
                 className="image"
               />
               <div className="category-tag2">{restaurant.category}</div>
             </div>
+
             <div className="content">
               <div className="header">
                 <div className="info">
                   <img
-                    src={restaurant.logo || "/placeholder.svg"}
+                    src={restaurant.logo}
                     alt={`${restaurant.name} logo`}
                     className="logo"
                   />
@@ -82,6 +91,3 @@ export default function NewRestaurants() {
     </div>
   );
 }
-
-
-

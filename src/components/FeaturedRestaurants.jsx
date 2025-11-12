@@ -1,36 +1,43 @@
 import React, { useState, useEffect } from "react";
 import "../styles/FeaturedRestaurants.css";
 
+// ✅ Import all images from your assets folder
+import spiceGardenImg from "../assets/Exotic Indian flavors.jpg";
+import pastaPalaceImg from "../assets/Pasta Palace.jpg";
+import sushiCentralImg from "../assets/Sushi Central.jpg";
+import burgerTownImg from "../assets/image8.png";
+import tacoFiestaImg from "../assets/Taco Fiesta.jpg";
+
 const restaurants = [
   {
     id: 1,
     name: "The Spice Garden",
     description: "Exotic Indian flavors",
-    image: "/Exotic Indian flavors.jpg",
+    image: spiceGardenImg,
   },
   {
     id: 2,
     name: "Pasta Palace",
     description: "Authentic Italian pasta",
-    image: "/Pasta Palace.jpg",
+    image: pastaPalaceImg,
   },
   {
     id: 3,
     name: "Sushi Central",
     description: "Fresh sushi and rolls",
-    image: "/Sushi Central.jpg",
+    image: sushiCentralImg,
   },
   {
     id: 4,
     name: "Burger Town",
     description: "Juicy gourmet burgers",
-    image: "/image 8.png",
+    image: burgerTownImg,
   },
   {
     id: 5,
     name: "Taco Fiesta",
     description: "Mexican street food",
-    image: "/Taco Fiesta.jpg",
+    image: tacoFiestaImg,
   },
 ];
 

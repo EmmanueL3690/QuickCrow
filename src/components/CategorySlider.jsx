@@ -1,23 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Pagination,
-  Navigation,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Pagination, Navigation, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "../styles/CategorySlider.css";
 
+// ✅ Import images from assets folder
+import image23 from "../assets/image23.png";
+import image22 from "../assets/image22.png";
+import image21 from "../assets/image21.png";
+import image8 from "../assets/image8.png";
+import image4 from "../assets/image4.png";
+import donut6 from "../assets/donut6.png";
+
+// ✅ Define your cards array
 const cards = [
-  { title: "Pizza", image: "\image 23.png" },
-  { title: "Shawarma", image: "\image 22.png" },
-  { title: "Pasta", image: "\image 21.png" },
-  { title: "Bread Burger", image: "\image 8.png" },
-  { title: "Chips", image: "\image 4.png" },
-  { title: "Donut", image: "\donut_6 1.png" },
+  { title: "Pizza", image: image23 },
+  { title: "Shawarma", image: image22 },
+  { title: "Pasta", image: image21 },
+  { title: "Bread Burger", image: image8 },
+  { title: "Chips", image: image4 },
+  { title: "Donut", image: donut6 },
 ];
 
 export default function CategorySlider() {

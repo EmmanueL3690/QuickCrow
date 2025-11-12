@@ -1,47 +1,54 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/TrendingNow.css";
 
+import pizzaImg from "../assets/image23.png";
+import chineseImg from "../assets/image21-1.png";
+import grillImg from "../assets/Grill.jpg";
+import friedRiceImg from "../assets/Fried Rice Combo.jpg";
+import burgerImg from "../assets/image8.png";
+import dessertImg from "../assets/Dessert.jpg";
+
 const dishes = [
   {
     id: 1,
     name: "Pepperoni Pizza",
     price: "₦2,500",
-    image: "\image 23.png",
+    image: pizzaImg,
     description: "A spicy cheesy delight.",
   },
   {
     id: 2,
     name: "Spaghetti Bolognese",
     price: "₦3,000",
-    image: "\image 21 (1).png",
+    image: chineseImg,
     description: "Classic pasta with rich meat sauce.",
   },
   {
     id: 3,
     name: "Grilled Chicken",
     price: "₦4,200",
-    image: "\Grilled Chicken.jpg",
+    image: grillImg,
     description: "Juicy chicken with smoky flavor.",
   },
   {
     id: 4,
     name: "Fried Rice Combo",
     price: "₦3,500",
-    image: "\Fried Rice Combo.jpg",
+    image: friedRiceImg,
     description: "Savory rice with beef and plantain.",
   },
   {
     id: 5,
     name: "Cheeseburger",
     price: "₦2,800",
-    image: "\image 8.png",
+    image: burgerImg,
     description: "Melty cheese on a juicy beef patty.",
   },
   {
     id: 6,
     name: "Dessert",
     price: "₦1,800",
-    image: "\Dessert.jpg",
+    image: dessertImg,
     description: "Sweet creamy indulgent finish.",
   },
 ];
