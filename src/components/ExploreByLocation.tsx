@@ -2,12 +2,12 @@ import React from "react";
 import "../styles/ExploreByLocation.css";
 import { MapPin } from "lucide-react";
 
-import lagosImg from "../assets/lagos.jpg";
-import abujaImg from "../assets/abuja.jpg";
-import kanoImg from "../assets/kano.jpg";
-import portHarcourtImg from "../assets/portharcourt.jpg";
-import ibadanImg from "../assets/Ibadan.jpg";
-import beninCityImg from "../assets/benincity.jpg";
+const lagosImg = "/assets/lagos.jpg";
+const abujaImg = "/assets/abuja.jpg";
+const kanoImg = "/assets/kano.jpg";
+const portHarcourtImg = "/assets/portharcourt.jpg";
+const ibadanImg = "/assets/Ibadan.jpg";
+const beninCityImg = "/assets/benincity.jpg";
 
 const locations = [
   { name: "Lagos", image: lagosImg },
