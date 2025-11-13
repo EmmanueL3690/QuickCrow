@@ -3,10 +3,10 @@ import "../styles/FoodCategories.css";
 
 import pizzaImg from "../assets/image23.png";
 import chineseImg from "../assets/image21-1.png";
-import grillImg from "../assets/Grill.jpg";
-import dessertImg from "../assets/Dessert.jpg";
+import grillImg from "../assets/grill.jpg";
+import dessertImg from "../assets/dessert.jpg";
 import burgersImg from "../assets/image8.png";
-import drinksImg from "../assets/Drinks.jpg";
+import drinksImg from "../assets/drinks.jpg";
 
 const categories = [
   {

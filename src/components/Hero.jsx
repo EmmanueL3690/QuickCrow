@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../styles/index.css";
 
 // ✅ Import images from assets folder
-import homeScreen1 from "../assets/homeScreen1.jpg";
+import homeScreen1 from "../assets/homescreen1.jpg";
 import screen2 from "../assets/screen2.jpg";
 import screen3 from "../assets/screen3.jpg";
 

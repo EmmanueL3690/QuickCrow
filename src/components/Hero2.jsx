@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import '../styles/Hero2.css';
 
 // ✅ Import your image from assets
-import eventElegance from '../assets/Event-Elegance.jpg';
+import eventElegance from '../assets/eventelegance.jpg';
 
 const Hero2 = () => {
   const ref = useRef(null);

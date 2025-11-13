@@ -3,9 +3,9 @@ import "../styles/OrderPage.css";
 
 // ✅ Import your images from assets
 import image8 from "../assets/image8.png";
-import sushiCentral from "../assets/Sushi Central.jpg";
-import grilledChicken from "../assets/Grilled Chicken.jpg";
-import tacoFiesta from "../assets/Taco Fiesta.jpg";
+import sushiCentral from "../assets/sushicentral.jpg";
+import grilledChicken from "../assets/grilledchicken.jpg";
+import tacoFiesta from "../assets/tacofiesta.jpg";
 
 const orders = [
   {

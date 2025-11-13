@@ -14,8 +14,8 @@ function Footer() {
       hideTimeout = setTimeout(() => setShowText(false), 20000); // Hide after 20s
       showTimeout = setTimeout(() => {
         setShowText(true);
-        toggleMessage(); // Restart cycle
-      }, 30000); // Show again after 10s of being hidden
+        toggleMessage(); 
+      }, 30000); 
     };
 
     toggleMessage();

@@ -3,10 +3,10 @@ import "../styles/TrendingNow.css";
 
 import pizzaImg from "../assets/image23.png";
 import chineseImg from "../assets/image21-1.png";
-import grillImg from "../assets/Grill.jpg";
-import friedRiceImg from "../assets/Fried Rice Combo.jpg";
+import grillImg from "../assets/grill.jpg";
+import friedRiceImg from "../assets/friedricecombo.jpg";
 import burgerImg from "../assets/image8.png";
-import dessertImg from "../assets/Dessert.jpg";
+import dessertImg from "../assets/dessert.jpg";
 
 const dishes = [
   {

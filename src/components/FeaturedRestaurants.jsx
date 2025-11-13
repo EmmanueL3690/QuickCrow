@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import "../styles/FeaturedRestaurants.css";
 
 // ✅ Import all images from your assets folder
-import spiceGardenImg from "../assets/Exotic Indian flavors.jpg";
-import pastaPalaceImg from "../assets/Pasta Palace.jpg";
-import sushiCentralImg from "../assets/Sushi Central.jpg";
+import spiceGardenImg from "../assets/exoticindianflavors.jpg";
+import pastaPalaceImg from "../assets/pastapalace.jpg";
+import sushiCentralImg from "../assets/sushicentral.jpg";
 import burgerTownImg from "../assets/image8.png";
-import tacoFiestaImg from "../assets/Taco Fiesta.jpg";
+import tacoFiestaImg from "../assets/tacofiesta.jpg";
 
 const restaurants = [
   {

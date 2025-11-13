@@ -2,16 +2,16 @@ import React from "react";
 import "../styles/Service.css";
 import { Search, Star } from "lucide-react";
 
-// ✅ Import all images from assets folder
-import chefImg from "../assets/Chef.jpg";
-import catererImg from "../assets/Caterer.jpg";
-import eventSetupImg from "../assets/EventSetup.jpg";
-import foodTruckImg from "../assets/Food Truck.jpg";
+//  Import all images from assets folder
+import chefImg from "../assets/chef.jpg";
+import catererImg from "../assets/caterer.jpg";
+import eventSetupImg from "../assets/eventsetup.jpg";
+import foodTruckImg from "../assets/foodtruck.jpg";
 
-import chefAntoineImg from "../assets/Chef Antoine.jpg";
-import gourmetGatheringsImg from "../assets/Gourmet Gatherings.jpg";
-import eventEleganceImg from "../assets/Event-Elegance.jpg";
-import tacoTruckImg from "../assets/Taco Truck Express.jpg";
+import chefAntoineImg from "../assets/chefantoine.jpg";
+import gourmetGatheringsImg from "../assets/gourmetgatherings.jpg";
+import eventEleganceImg from "../assets/eventelegance.jpg";
+import tacoTruckImg from "../assets/tacotruckexpress.jpg";
 
 export default function HireServicesPage() {
   const categories = [
