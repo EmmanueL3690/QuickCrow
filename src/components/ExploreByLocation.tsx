@@ -6,7 +6,7 @@ const lagosImg = "/assets/lagos.jpg";
 const abujaImg = "/assets/abuja.jpg";
 const kanoImg = "/assets/kano.jpg";
 const portHarcourtImg = "/assets/portharcourt.jpg";
-const ibadanImg = "/assets/Ibadan.jpg";
+const ibadanImg = "/assets/ibadan.jpg";
 const beninCityImg = "/assets/benincity.jpg";
 
 const locations = [
