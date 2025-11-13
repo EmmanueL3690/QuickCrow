@@ -11,7 +11,7 @@ import Profile from './pages/Profile';
 
 function App() {
   return (
-   <Router basename="/quickcrow">
+   <Router basename="/vite-project--QuickCrow">
 
       <Header />
 

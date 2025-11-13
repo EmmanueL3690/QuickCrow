@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/quickcrow/', 
+  base: '/vite-project--QuickCrow/', 
   plugins: [react()],
 })
 
