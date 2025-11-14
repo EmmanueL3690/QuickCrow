@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/FeaturedRestaurants.css";
 
 // ✅ Import all images from your assets folder
-import spiceGardenImg from "../assets/exoticindianflavors.jpg";
+import exoticindianflavorsImg from "../assets/exoticindianflavors.jpg";
 import pastaPalaceImg from "../assets/pastapalace.jpg";
 import sushiCentralImg from "../assets/sushicentral.jpg";
 import burgerTownImg from "../assets/image8.png";
@@ -13,7 +13,7 @@ const restaurants = [
     id: 1,
     name: "The Spice Garden",
     description: "Exotic Indian flavors",
-    image: spiceGardenImg,
+    image: exoticindianflavorsImg,
   },
   {
     id: 2,
