@@ -1,6 +1,6 @@
 import React from "react";
-import Service from "../components/Service";
-import FadeInSection from "../components/FadeInSection";
+import Service from "../components/Service.jsx";
+import FadeInSection from "../components/FadeInSection.jsx";
 import BackToTop from '../components/BackToTop.jsx';
 
 export default function ServicePage() {

@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero2 from '../components/Hero2';
-import FeaturedRestaurants from '../components/Featuredrestaurants';
-import FoodCategories from "../components/FoodCategories";
-import TrendingNow from "../components/TrendingNow";
-import ExploreByLocation from "../components/ExploreByLocation";
+import Hero2 from '../components/Hero2.jsx';
+import FeaturedRestaurants from '../components/FeaturedRestaurants.jsx';
+import FoodCategories from "../components/FoodCategories.jsx";
+import TrendingNow from "../components/TrendingNow.jsx";
+import ExploreByLocation from "../components/ExploreByLocation.jsx";
 import FadeInSection from "../components/FadeInSection";
 import BackToTop from '../components/BackToTop.jsx';
 

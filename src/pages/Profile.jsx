@@ -1,6 +1,6 @@
 import React from "react";
-import ProfilePage from "../components/ProfilePage";
-import FadeInSection from "../components/FadeInSection";
+import ProfilePage from "../components/ProfilePage.jsx";
+import FadeInSection from "../components/FadeInSection.jsx";
 
 export default function Profile() {
   return (

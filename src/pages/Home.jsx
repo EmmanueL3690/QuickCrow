@@ -5,7 +5,7 @@ import FeatureCards from '../components/Feature.jsx';
 import RestaurantCards from '../components/RestarantCard.jsx';
 import NewRestaurants from '../components/NewRestaurants.jsx';
 import BackToTop from '../components/BackToTop.jsx';
-import FadeInSection from "../components/FadeInSection";
+import FadeInSection from "../components/FadeInSection.jsx";
 
 export default function Home() {
   return (
