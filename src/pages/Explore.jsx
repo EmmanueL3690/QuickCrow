@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero2 from '../components/Hero2.jsx';
-import FeaturedRestaurants from '../components/FeaturedRestaurants.jsx';
+import FeaturedRestaurants from "../components/FeaturedRestaurants";
 import FoodCategories from "../components/FoodCategories.jsx";
 import TrendingNow from "../components/TrendingNow.jsx";
 import ExploreByLocation from "../components/ExploreByLocation.jsx";
