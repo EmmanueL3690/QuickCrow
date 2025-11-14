@@ -11,7 +11,7 @@ import Profile from './pages/Profile';
 
 function App() {
   return (
-   <Router basename="/QuickCrow">
+   <Router basename="/">
 
 
       <Header />
