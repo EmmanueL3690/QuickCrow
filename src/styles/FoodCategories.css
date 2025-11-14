@@ -11,14 +11,14 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns mobile */
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
   justify-items: center;
 }
 
 @media screen and (min-width: 1024px) {
   .category-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns desktop */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
