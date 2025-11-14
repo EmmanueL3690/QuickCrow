@@ -205,25 +205,25 @@ body {
 }
 
 .search-bar-mobile-search{
-  width: 5rem;
+  width: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 83px;
-  padding: 5px;
+  left: 117px;
+  padding: 6px;
 }
 
 .inp-bar{
     padding: 10px;
-    width: 13rem;
+    width: 11.5rem;
     border-radius: 15px;
     font-size: 16px;
     border: none;
 }
 .button1{
- padding: 8px 5px;
- border-radius: 15px;
+ padding: 3px 3px;
+ border-radius: 13px;
  color: #DC7318;
  background-color: #4e4a4a2f;
 }

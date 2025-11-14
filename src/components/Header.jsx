@@ -87,7 +87,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Sidebar Nav */}
      {/* Mobile Sidebar Nav */}
 <nav className={`navbar mobile-only ${menuOpen ? "active" : ""}`}>
   <div className="sidebar-logo">QuickChow</div>

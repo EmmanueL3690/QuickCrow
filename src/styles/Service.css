@@ -13,7 +13,9 @@
 }
 
 .banner h1 {
-  font-size: 3.5rem;
+  font-size: 3.9rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
   margin-bottom: 10px;
 }
 
@@ -81,7 +83,7 @@
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
