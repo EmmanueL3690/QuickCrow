@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import logo from "./assets/logo.jpg"; // ✅ Import your logo
+import './index.css';
+
 
 // Dynamically set favicon
 const link = document.createElement("link");
