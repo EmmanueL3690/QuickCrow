@@ -1,11 +1,14 @@
 import HeroBanner from "../Home/HeroBanner";
 import PromoCarousel from "../Home/PromoCarousel";
-import LocationChip from "../Home/LocationChip"; // NEW
-import FeaturedCategories from "../Home/FeaturedCategories";
+import LocationChip from "../Home/LocationChip"; 
+// import FeaturedCategories from "../Home/FeaturedCategories";
 import FeaturedRestaurants from "../Home/FeaturedRestaurants";
 import FastDelivery from "../Home/FastDelivery";
-import OrderAgain from "../Home/OrderAgain";
-import Recommended from "../Home/Recommended";
+// import OrderAgain from "../Home/OrderAgain";
+// import Recommended from "../Home/Recommended";
+import ServicesShowcase from "./ServicesShowcase";
+import ChefServiceSection from "./ChefServiceSection";
+import EventServicesSection from "./EventServicesSection";
 
 export default function Home() {
   return (
@@ -22,30 +25,44 @@ export default function Home() {
         <PromoCarousel />
       </div>
 
+      {/* SERVICES SHOWCASE */}
+      <section className="mt-8 px-4">
+        <ServicesShowcase />
+      </section>
+
       {/* FAST DELIVERY */}
       <section className="mt-8 px-4">
         <FastDelivery />
       </section>
 
-      {/* ORDER AGAIN */}
+      {/* ORDER AGAIN
       <section className="mt-8 px-4">
         <OrderAgain />
       </section>
 
       {/* CATEGORIES */}
-      <section className="mt-8 px-4">
+      {/* <section className="mt-8 px-4">
         <FeaturedCategories />
-      </section>
+      </section> */} 
 
       {/* TOP RESTAURANTS */}
       <section className="mt-8 px-4">
         <FeaturedRestaurants title="Top Restaurants" />
       </section>
 
-      {/* RECOMMENDED */}
+      {/* CHEF SERVICE SECTION */}
       <section className="mt-8 px-4">
-        <Recommended />
+        <ChefServiceSection />
       </section>
+      {/* EVENT SERVICES SECTION */}
+      <section className="mt-8 px-4">
+        <EventServicesSection />
+      </section>
+
+      {/* RECOMMENDED */}
+      {/* <section className="mt-8 px-4">
+        <Recommended />
+      </section> */}
     </div>
   );
 }

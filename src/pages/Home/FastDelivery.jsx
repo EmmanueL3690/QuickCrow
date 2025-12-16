@@ -1,10 +1,7 @@
 import { Clock } from "lucide-react";
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export default function FastDeliveryTrending() {
-  const scrollRef = useRef(null);
-
   const vendors = [
     {
       id: 1,
@@ -16,63 +13,41 @@ export default function FastDeliveryTrending() {
       id: 2,
       name: "Genesis Restaurant",
       time: "20–25 mins",
-      image: "/fast/genesis.png",
+      image: "https://images.unsplash.com/photo-1545668855-b923f0176935?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVhdCUyMHBpZXxlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       id: 3,
       name: "Market Square",
       time: "10–15 mins",
-      image: "/fast/market-square.png",
+      image: "https://images.unsplash.com/photo-1592415486689-125cbbfcbee2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhbmR3aWNofGVufDB8fDB8fHww",
     },
     {
       id: 4,
       name: "Kilimanjaro",
       time: "18–22 mins",
-      image: "/fast/kilimanjaro.png",
+      image: "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNoYXdhcm1hfGVufDB8fDB8fHww",
     },
   ];
-
-  // AUTO SCROLL LIKE TRENDING
-  useEffect(() => {
-    const container = scrollRef.current;
-    let speed = 1;
-
-    const scroll = () => {
-      if (!container) return;
-
-      container.scrollLeft += speed;
-
-      // Infinite loop
-      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
-        container.scrollLeft = 0;
-      }
-    };
-
-    const interval = setInterval(scroll, 20); 
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="mt-10 w-full">
       {/* HEADER */}
-      <div className="flex items-center justify-between px-1 mb-5">
-        <h2 className="text-2xl lg:text-3xl font-extrabold">⚡ Fast Delivery</h2>
+      <div className="flex items-center justify-between mb-5">
+        <h2 className="text-2xl lg:text-3xl font-extrabold">
+          ⚡ Fast Delivery
+        </h2>
         <button className="text-sm lg:text-base font-semibold text-primary hover:underline">
           View All
         </button>
       </div>
 
-      {/* SCROLLING WRAPPER */}
-      <div
-        ref={scrollRef}
-        className="flex gap-5 overflow-x-auto no-scrollbar py-3 scroll-smooth"
-      >
-        {/* Duplicate for infinite scrolling */}
-        {[...vendors, ...vendors].map((vendor, index) => (
+      {/* GRID CARDS */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        {vendors.map((vendor) => (
           <Link
+            key={vendor.id}
             to={`/restaurant/${vendor.id}`}
-            key={`${vendor.id}-${index}`}
-            className="min-w-[165px] lg:min-w-[240px] bg-white rounded-2xl shadow-lg border overflow-hidden 
+            className="bg-white rounded-2xl shadow-lg border overflow-hidden 
                        transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             {/* IMAGE */}

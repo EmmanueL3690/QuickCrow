@@ -1,111 +1,81 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { promoSlides } from "../../data/promoSlides";
+import { MapPin, Search } from "lucide-react";
+import AnimatedHeroImages from "./AnimatedHeroImages";
 
 export default function HeroBanner() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % promoSlides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % promoSlides.length);
-
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev - 1 + promoSlides.length) % promoSlides.length);
-
   return (
-    <section className="relative overflow-hidden rounded-2xl lg:rounded-3xl mt-4">
-      <div className="relative h-[200px] sm:h-[260px] lg:h-[380px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 120 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -120 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0"
-          >
-            {/* Background Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${promoSlides[currentSlide].image})`,
-              }}
-            />
+    <section className="w-full mt-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        
+        {/* LEFT CONTENT */}
+        <div>
+          <span className="inline-block mb-4 rounded-full bg-orange-100 px-4 py-1 text-sm font-semibold text-green-600">
+            ✨ Your All-in-One Lifestyle Platform
+          </span>
 
-            {/* Color Overlay */}
-            <div
-              className={`absolute inset-0 bg-gradient-to-r ${promoSlides[currentSlide].color} opacity-80`}
-            />
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Food, Chefs & <br />
+            <span className="text-green-500">Events</span> <br />
+            All in One Place
+          </h1>
 
-            {/* TEXT SECTION */}
-            <div className="relative h-full flex flex-col justify-center px-6 sm:px-10 lg:px-16">
-              <motion.h2
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-2"
-              >
-                {promoSlides[currentSlide].title}
-              </motion.h2>
+          <p className="mt-4 text-gray-600 max-w-xl">
+            Order from top restaurants, hire professional chefs for private dining,
+            or plan your dream event — all seamlessly through QuickCrow.
+          </p>
 
-              <motion.p
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg sm:text-xl lg:text-2xl text-white/90"
-              >
-                {promoSlides[currentSlide].subtitle}
-              </motion.p>
+          {/* CTA BUTTONS */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            <button className="rounded-full bg-green-500 px-6 py-3 text-white font-semibold shadow hover:bg-green-600">
+              🍔 Order Food
+            </button>
+            <button className="rounded-full bg-gray-100 px-6 py-3 font-semibold hover:bg-gray-200">
+              👨‍🍳 Hire a Chef
+            </button>
+            <button className="rounded-full bg-gray-100 px-6 py-3 font-semibold hover:bg-gray-200">
+              🎉 Plan Event
+            </button>
+          </div>
 
-              <motion.button
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="mt-4 sm:mt-6 w-fit rounded-full bg-white px-6 py-2.5 sm:px-8 sm:py-3 font-semibold text-black shadow-lg hover:shadow-xl transition-all hover:scale-105"
-              >
-                Order Now
-              </motion.button>
+          {/* SEARCH BAR */}
+          <div className="mt-6 flex flex-wrap items-center gap-3 rounded-full bg-white p-3 shadow-lg max-w-xl">
+            <div className="flex items-center gap-2 px-3 text-gray-500">
+              <MapPin size={18} />
+              <span>Lagos</span>
             </div>
-          </motion.div>
-        </AnimatePresence>
 
-        {/* LEFT ARROW */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/90 shadow-md hover:bg-white transition"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-
-        {/* RIGHT ARROW */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/90 shadow-md hover:bg-white transition"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
-
-        {/* SLIDE DOTS */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-          {promoSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all ${
-                index === currentSlide ? "w-6 bg-white" : "w-2 bg-white/50"
-              }`}
+            <input
+              type="text"
+              placeholder="Search restaurants or dishes..."
+              className="flex-1 outline-none px-2 text-sm"
             />
-          ))}
+
+            <button className="rounded-full bg-orange-500 px-6 py-2.5 text-white font-semibold hover:bg-orange-600">
+              Search
+            </button>
+          </div>
+
+          {/* STATS */}
+          <div className="mt-8 flex gap-16">
+            <div>
+              <h4 className="text-3xl font-extrabold">500+</h4>
+              <p className="text-sm text-gray-500">Restaurants</p>
+            </div>
+            <div>
+              <h4 className="text-3xl font-extrabold">50+</h4>
+              <p className="text-sm text-gray-500">Pro Chefs</p>
+            </div>
+            <div>
+              <h4 className="text-3xl font-extrabold">1000+</h4>
+              <p className="text-sm text-gray-500">Events</p>
+            </div>
+          </div>
         </div>
+
+        {/* RIGHT IMAGE CARDS */}
+        <AnimatedHeroImages />
+
       </div>
     </section>
   );
 }
+ 

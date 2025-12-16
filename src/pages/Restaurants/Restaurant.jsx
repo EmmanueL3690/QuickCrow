@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {
-  Search,
   SlidersHorizontal,
   ChevronDown,
 } from "lucide-react";
@@ -124,19 +123,7 @@ export default function Restaurant() {
         </p>
       </div>
 
-      {/* SEARCH */}
-      <div className="px-6 mt-5">
-        <div className="flex items-center gap-3 bg-gray-100 px-4 py-3 rounded-2xl shadow-sm">
-          <Search size={18} className="text-gray-600" />
-          <input
-            type="text"
-            placeholder="Search restaurants..."
-            className="bg-transparent outline-none w-full"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-      </div>
+
 
       {/* CATEGORY FILTERS */}
       <div className="px-6 mt-5 flex flex-wrap gap-3">

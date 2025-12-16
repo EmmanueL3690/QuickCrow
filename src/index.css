@@ -5,3 +5,25 @@
 .container {
   @apply mx-auto px-4;
 }
+
+@layer components {
+  .input-style {
+    @apply w-full bg-white border border-gray-200 rounded-full px-4 py-3 text-sm 
+           outline-none focus:ring-2 focus:ring-yellow-400 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply w-full rounded-full bg-yellow-400 py-3 font-medium text-black text-sm 
+           hover:bg-yellow-300 transition shadow-md disabled:opacity-75;
+  }
+
+  .social-btn {
+    @apply flex items-center gap-2 w-full bg-white border border-gray-300 rounded-full 
+           py-3 px-4 text-sm font-medium shadow-sm hover:bg-gray-50 transition;
+  }
+
+  .error-text {
+    @apply text-red-500 text-xs mb-2 ml-2;
+  }
+}
+

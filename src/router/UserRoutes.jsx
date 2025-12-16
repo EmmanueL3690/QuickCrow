@@ -100,31 +100,34 @@ import OrderHistory from "../pages/Orders/OrderHistory";
 import OrderStatus from "../pages/Orders/OrderStatus";
 import Orders from "../pages/Orders/Order";
 import EditProfile from "../../src/pages/Profile/EditProfile"
+import Login from "../../src/pages/Auth/Login";
+import Signup from "../../src/pages/Auth/Register";
+import VendorRegister from "../pages/Vendor/VendorRegister";
 
 import CartPage from "../pages/Cart/CartPage";
 
 export const UserRoutes = (
   <>
-   <Route element={<MainLayout />}>
-  <Route path="/" element={<Home />} />
+    {/* ROUTES WITH NAVBAR */}
+    <Route element={<MainLayout />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/restaurants" element={<Restaurant />} />
+      <Route path="/restaurants/:id" element={<RestaurantDetails />} />
+      <Route path="/food/:id" element={<FoodDetail />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/orders/history" element={<OrderHistory />} />
+      <Route path="/order/status/:id" element={<OrderStatus />} />
+      <Route path="/orders" element={<Orders />} />
+      <Route path="/EditProfile" element={<EditProfile />} />
+    </Route>
 
-  {/* Restaurants list */}
-<Route path="/restaurants" element={<Restaurant />} />
+    {/* ROUTES WITHOUT NAVBAR */}
+    <Route path="/login" element={<Login />} />
+    <Route path="/signup" element={<Signup />} />
+    <Route path="/vendor/register" element={<VendorRegister />} />
 
-
-  {/* Restaurant details */}
-  <Route path="/restaurants/:id" element={<RestaurantDetails />} />
-
-  <Route path="/food/:id" element={<FoodDetail />} />
-  <Route path="/cart" element={<CartPage />} />
-  <Route path="/orders/history" element={<OrderHistory />} />
-  <Route path="/order/status/:id" element={<OrderStatus />} />
-  <Route path="/orders" element={<Orders />} />
-  <Route path="/EditProfile" element={<EditProfile />} />
-</Route>
-
-
-    {/* TEST ROUTE WITHOUT LAYOUT (OPTIONAL) */}
+    {/* Optional test */}
     <Route path="/test-home" element={<Home />} />
   </>
 );
+
